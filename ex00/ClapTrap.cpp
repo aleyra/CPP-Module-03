@@ -1,12 +1,33 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(){
+	std::cout << "Construction of a ClapTrap" << std::endl;
+}
+
+ClapTrap::ClapTrap(ClapTrap const &src){
+	this->_name = src._name;
+	this->_hitPoints = src._hitPoints;
+	this->_energyPoints = src._energyPoints;
+	this->_attack_Damage = src._attack_Damage;
+}
+
 ClapTrap::ClapTrap( std::string name ){
 	std::cout << "Construction of a ClapTrap called " << name << std::endl;
 	this->_name = name;
+	this->_hitPoints = 10;
+	this->_energyPoints = 10;
+	this->_attack_Damage = 0;
 }
 
 ClapTrap::~ClapTrap(){
 	std::cout << "Destruction of a ClapTrap" << std::endl;
+}
+
+ClapTrap&	ClapTrap::operator=(ClapTrap const &src){
+	this->_name = src._name;
+	this->_hitPoints = src._hitPoints;
+	this->_energyPoints = src._energyPoints;
+	this->_attack_Damage = src._attack_Damage
 }
 
 void	ClapTrap::attack(std::string const & target){
