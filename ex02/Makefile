@@ -6,10 +6,10 @@ NAME		=	clap
 PATH_OBJ	=	objs
 
 #List of sources
-SRCS		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+SRCS		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJS		=	$(addprefix $(PATH_OBJ)/, $(SRCS:.cpp=.o))
-INCS		=	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
+INCS		=	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 # Commands of compilation
 COMP		=	clang++

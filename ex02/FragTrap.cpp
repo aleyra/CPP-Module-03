@@ -3,6 +3,12 @@
 FragTrap::FragTrap(std::string name){
 	std::cout << "Construction of a FragTrap called " << name << std::endl;
 	this->_name = name;
+	if (this->_hitPoints != 100)
+		this->_hitPoints = 100;
+	if (this->_energyPoints != 100)
+		this->_energyPoints = 100;
+	if (this->_attack_Damage != 30)
+		this->_attack_Damage = 30;
 }
 
 FragTrap::~FragTrap(){
