@@ -2,6 +2,9 @@
 
 FragTrap::FragTrap(){
 	std::cout << "Construction of a FragTrap" << std::endl;
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_attack_Damage = 30;
 }
 
 FragTrap::FragTrap(FragTrap const &src){

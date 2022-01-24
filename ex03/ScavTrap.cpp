@@ -2,6 +2,9 @@
 
 ScavTrap::ScavTrap(){
 	std::cout << "Construction of a ScavTrap" << std::endl;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attack_Damage = 20;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &src){

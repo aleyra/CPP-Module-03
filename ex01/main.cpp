@@ -6,6 +6,12 @@ int	main(){
 	ClapTrap	clap1(claptrap1);
 	ScavTrap	scav1(scavtrap1);
 
+	std::cout << "\033[34m\tfrom ex00\033[0m" << std::endl << std::endl;
+	clap1.attack(scavtrap1);
+	scav1.takeDamage(3);
+	scav1.beRepaired(2);
+	
+	std::cout << std::endl << "\033[34m\tfor ex01\033[0m" << std::endl << std::endl; 
 	clap1.attack(scavtrap1);
 	scav1.takeDamage(3);
 	scav1.beRepaired(2);
