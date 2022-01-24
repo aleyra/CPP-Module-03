@@ -27,7 +27,8 @@ ClapTrap&	ClapTrap::operator=(ClapTrap const &src){
 	this->_name = src._name;
 	this->_hitPoints = src._hitPoints;
 	this->_energyPoints = src._energyPoints;
-	this->_attack_Damage = src._attack_Damage
+	this->_attack_Damage = src._attack_Damage;
+	return (*this);
 }
 
 void	ClapTrap::attack(std::string const & target){
