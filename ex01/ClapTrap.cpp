@@ -45,35 +45,35 @@ void	ClapTrap::beRepaired(unsigned int amount){
 		<< this->_hitPoints << "." << std::endl;
 }
 
-std::string		ClapTrap::getName(){
-	return (this->_name);
-}
+// std::string		ClapTrap::getName(){
+// 	return (this->_name);
+// }
 
-void			ClapTrap::setName(std::string name){
-	this->_name = name;
-}
+// void			ClapTrap::setName(std::string name){
+// 	this->_name = name;
+// }
 
-unsigned int	ClapTrap::getHitPoints(){
-	return (this->_hitPoints);
-}
+// unsigned int	ClapTrap::getHitPoints(){
+// 	return (this->_hitPoints);
+// }
 
-void			ClapTrap::setHitPoints(unsigned int hp){
-	this->_hitPoints = hp;
-}
+// void			ClapTrap::setHitPoints(unsigned int hp){
+// 	this->_hitPoints = hp;
+// }
 
-unsigned int	ClapTrap::getEnergyPoints(){
-	return(this->_energyPoints);
-}
+// unsigned int	ClapTrap::getEnergyPoints(){
+// 	return(this->_energyPoints);
+// }
 
-void			ClapTrap::setEnergyPoints(unsigned int ep){
-	this->_energyPoints = ep;
-}
+// void			ClapTrap::setEnergyPoints(unsigned int ep){
+// 	this->_energyPoints = ep;
+// }
 
-unsigned int	ClapTrap::getAttackDamage(){
-	return(this->_attack_Damage);
-}
+// unsigned int	ClapTrap::getAttackDamage(){
+// 	return(this->_attack_Damage);
+// }
 
-void			ClapTrap::setAttackDamage(unsigned int ad){
-	this->_attack_Damage = ad;
-}
+// void			ClapTrap::setAttackDamage(unsigned int ad){
+// 	this->_attack_Damage = ad;
+// }
 
