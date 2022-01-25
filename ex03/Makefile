@@ -13,7 +13,7 @@ INCS		=	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 # Commands of compilation
 COMP		=	clang++
-COMP_FLAG	=	-Wall -Werror -Wextra
+COMP_FLAG	=	-Wall -Werror -Wextra -Wshadow -Wno-shadow
 
 # Others Command
 RM			=	/bin/rm
