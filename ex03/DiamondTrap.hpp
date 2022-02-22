@@ -13,14 +13,16 @@ public:
 	DiamondTrap	&operator=(DiamondTrap const &src);
 
 	void	whoAmI();
-	void	attack(std::string const & target);
-	void	display();
+	using 	ScavTrap::attack;
 
 protected:
 	DiamondTrap();
 
 private:
 	std::string _name;
+	// using	FragTrap::_hitPoints;
+	// using	ScavTrap::_energyPoints;
+	// using	FragTrap::_attack_Damage;
 };
 
 #endif
