@@ -33,40 +33,32 @@ ClapTrap&	ClapTrap::operator=(ClapTrap const &src){
 
 void	ClapTrap::attack(std::string const & target){
 
-	if (this->_energyPoints > 0 && this->_hitPoints > this->_attack_Damage){
+	if (this->_energyPoints > 0 && this->_hitPoints > 0){
 		std::cout << "ClapTrap " << this->_name << " attack " << target
-			<< ", causing some damage!" << std::endl;
+			<< ", causing " << this->_attack_Damage << " points of damage!" << std::endl;
 		this->_energyPoints--;
 		std::cout << "\tIt has " << this->_energyPoints << " energy points left."  << std::endl;
 	}
 	else
 		std::cout << "Nothing happen because " << this->_name
-			<< " has 0 energy point or took too much damage." << std::endl;
+			<< " has 0 energy point or has 0 hit point." << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount){
 	std::cout << "ClapTrap " << this->_name << " take " << amount
 		<< " points of damage!" << std::endl;
-	this->_attack_Damage += amount;
-	std::cout << "\tIts amount of damage is " << this->_attack_Damage << "/"
-		<< this->_hitPoints << "." << std::endl;
+	this->_hitPoints -= amount;
+	std::cout << "\tIt has " << this->_hitPoints << " left." << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount){
-	if (this->_energyPoints > 0 && this->_hitPoints > this->_attack_Damage){
+	if (this->_energyPoints > 0 && this->_hitPoints > 0){
 		std::cout << "ClapTrap " << this->_name << " is repaired with "
 			<< amount << " points." << std::endl;
-		if (this->_attack_Damage < amount)
-			this->_attack_Damage = 0;
-		else
-			this->_attack_Damage -= amount;
-		std::cout << "\tIts amount of damage is " << this->_attack_Damage << "/"
-			<< this->_hitPoints << "." << std::endl;
-		this->_energyPoints--;
+		this->_hitPoints += amount;
+		std::cout << "\tIt has " << this->_hitPoints << " left." << std::endl;
 	}
 	else
 		std::cout << "Nothing happen because " << this->_name
-			<< " has 0 energy point or took too much damage." << std::endl;
-
-	
+			<< " has 0 energy point or has 0 hit point." << std::endl;
 }

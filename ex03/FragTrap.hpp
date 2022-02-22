@@ -3,9 +3,8 @@
 
 # include "ClapTrap.hpp"
 
-class FragTrap: virtual public ClapTrap{
+class FragTrap:virtual public ClapTrap{
 public:
-	FragTrap();
 	FragTrap(FragTrap const &src);
 	FragTrap(std::string name);
 	~FragTrap();
@@ -16,6 +15,7 @@ public:
 	void	attack(std::string const & target);
 
 protected:
+	FragTrap();
 
 };
 

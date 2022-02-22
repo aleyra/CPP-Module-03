@@ -41,13 +41,13 @@ void	FragTrap::highFivesGuys(void){
 
 void	FragTrap::attack(std::string const & target){
 
-	if (this->_energyPoints > 0 && this->_hitPoints > this->_attack_Damage){
+	if (this->_energyPoints > 0 && this->_hitPoints > 0){
 		std::cout << "FragTrap " << this->_name << " attack " << target
-			<< ", causing some damage!" << std::endl;
+			<< ", causing " << this->_attack_Damage << " points of damage!" << std::endl;
 		this->_energyPoints--;
 		std::cout << "\tIt has " << this->_energyPoints << " energy points left."  << std::endl;
 	}
 	else
 		std::cout << "Nothing happen because " << this->_name
-				<< " has 0 energy point or took too much damage." << std::endl;
+				<< " has 0 energy point or has 0 hit point." << std::endl;
 }
